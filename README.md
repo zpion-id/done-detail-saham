@@ -1,4 +1,4 @@
-# Data Historis Harga Saham
+# Data Done Detail Saham
 
 Ambil repo dari remote pertama kali :
 
