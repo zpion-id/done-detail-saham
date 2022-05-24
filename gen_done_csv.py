@@ -9,8 +9,8 @@ from common import (
 
 tick = 'ICBP INDF JSMR MYOR PTBA TLKM UNVR'.split(' ')
 year = '2022'
-month = '04'
-date = '25 26 27 28 29'.split(' ')
+month = '05'
+date = '09 10 11 12 13 17 18 19 20 23'.split(' ')
 
 if __name__ == "__main__":
     root = os.getcwd()
@@ -22,6 +22,9 @@ if __name__ == "__main__":
     for t in tick :
         for d in date:
             file_path = path_join([done_dir, t, year, file_name(t, year, month, d)])
+            if file_exist(file_path):
+                print('File sudah ada : '+ file_path)
             if not file_exist(file_path):
-                print('create file : '+ file_path)
+                print('Create file : '+ file_path)
                 create_csv(file_path)
+            
