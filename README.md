@@ -11,10 +11,3 @@ Update lokal repo dari remote repo :
 Update remote repo dari lokal repo :
 
 `git push https://github.com/zpion-id/done-detail-saham.git`
-
-atau
-
-```
-user@host /done-detail-saham (main)
-$ git push -u origin main
-```
