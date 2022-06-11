@@ -19,3 +19,24 @@ def create_csv(path_csv:str):
     with open(path_csv,'x', encoding='UTF8') as f :
         write = csv.writer(f)
         write.writerow('Time,Stock,Brd,Price,Qty,BT,BC,SC,ST'.split(','))
+
+def read_csv(path_csv:str):
+    line = []
+    with open(path_csv,'r') as f :
+        for l in f.readlines():
+            if l.find('\t\n') == -1 :
+                print('data sudah diformat')
+                saved = False
+                break
+            if l.find('\t\n') >= 0 :
+                l = l.replace('\t\n','\n')
+                l = l.replace(',','')
+                l = l.replace('\t',',')
+                line.append(l)
+                saved =True
+                #print(l)
+    return line, saved
+
+def write_new_format(path_csv:str, lines):
+    with open(path_csv, 'w') as f :
+            f.writelines(lines)
