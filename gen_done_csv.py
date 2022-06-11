@@ -9,8 +9,8 @@ from common import (
 
 tick = 'ICBP INDF JSMR MYOR PTBA TLKM UNVR'.split(' ')
 year = '2022'
-month = '05'
-date = '09 10 11 12 13 17 18 19 20 23'.split(' ')
+month = '06'
+date = '02 03 06 07 08 09 10'.split(' ')
 
 if __name__ == "__main__":
     root = os.getcwd()
