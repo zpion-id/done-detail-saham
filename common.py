@@ -18,7 +18,7 @@ def file_name(tick:str,y:str, m:str, d:str):
 def create_csv(path_csv:str):
     with open(path_csv,'x', encoding='UTF8') as f :
         write = csv.writer(f)
-        write.writerow('Time,Stock,Brd,Price,Qty,BT,BC,SC,ST'.split(','))
+        write.writerow('new,new,new,new,new'.split(','))
 
 def read_csv(path_csv:str):
     line = []
