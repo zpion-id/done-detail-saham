@@ -54,7 +54,7 @@ for t in tick :
     for d in dates:
         file_path = path_join([done_dir, t, y, file_name(t, y, m, d)])
         if file_exist(file_path):
-            list_files.append(file_path + ' size : ' + size_file(file_path) + ' byte')
+            list_files.append(file_path + ' size : ' + str(size_file(file_path)) + ' byte')
 
 
 if dates[0] == "":
