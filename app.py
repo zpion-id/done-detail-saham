@@ -59,14 +59,16 @@ for t in tick :
 
 if dates[0] == "":
     st.warning('masukan tanggal')
-if len(list_files)==0 :
+else :
     if st.button('create csv'):
         create_new_csv()
+        st.success("create csv selesai")
 if len(list_files)>0 :
     for i in list_files :
         st.write(i)
     if st.button('reformat csv'):
         reformat_csv()
+        st.success("Reformat selesai")
 
 
 # Cek apakah sudah complete di tambahkan datanya.
