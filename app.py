@@ -62,13 +62,13 @@ if dates[0] == "":
 else :
     if st.button('create csv'):
         create_new_csv()
-        st.success("create csv selesai")
+        st.success("create "+ str(len(list_files)) +" csv selesai")
 if len(list_files)>0 :
     for i in list_files :
         st.write(i)
     if st.button('reformat csv'):
         reformat_csv()
-        st.success("Reformat selesai")
+        st.success("Reformat "+ str(len(list_files)) +"file selesai")
 
 
 # Cek apakah sudah complete di tambahkan datanya.
