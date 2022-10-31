@@ -71,7 +71,7 @@ if len(list_files)>0 :
         st.write(i)
     if st.button('reformat csv'):
         reformat_csv()
-        st.success("Reformat "+ str(len(list_files)) +"file selesai")
+        st.success("Reformat "+ str(len(list_files)) +" file selesai")
 
 
 # Cek apakah sudah complete di tambahkan datanya.
