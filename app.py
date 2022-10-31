@@ -50,11 +50,13 @@ def reformat_csv():
 
 
 list_files = []
+count_file = 0
 for t in tick :
     for d in dates:
         file_path = path_join([done_dir, t, y, file_name(t, y, m, d)])
         if file_exist(file_path):
             list_files.append(file_path + ' size : ' + str(size_file(file_path)) + ' byte')
+            count_file += 1
 
 
 if dates[0] == "":
@@ -62,7 +64,7 @@ if dates[0] == "":
 else :
     if st.button('create csv'):
         create_new_csv()
-        st.success("create "+ str(len(list_files)) +" csv selesai")
+        st.success("create "+ str(count_file) +" csv selesai")
 if len(list_files)>0 :
     for i in list_files :
         st.write(i)
